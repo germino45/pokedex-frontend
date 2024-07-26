@@ -1,11 +1,12 @@
-function SearchBar() {
+function SearchBar({ onChange }) {
   return (
     <>
       <input
         type="text"
         placeholder="Search"
         className="searchbar"
-        id="search-input"></input>
+        id="search-input"
+        onChange={onChange}></input>
     </>
   );
 }

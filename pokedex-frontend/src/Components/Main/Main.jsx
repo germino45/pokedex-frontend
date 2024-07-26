@@ -3,7 +3,7 @@ import { getPokemon } from "../../utils/PokemonApi";
 
 import ItemCard from "../ItemCard/ItemCard";
 
-const Main = () => {
+const Main = ({ searchText }) => {
   const [pokemon, setPokemon] = useState([]);
   const [pokemonName, setPokemonName] = useState("");
 
@@ -21,9 +21,13 @@ const Main = () => {
 
   return (
     <main className="main">
-      {pokemon.map((pokeIndex, id) => {
-        return <ItemCard key={id} pokeIndex={id} name={pokemonName} />;
-      })}
+      {pokemon
+        .filter((pokeObject) => {
+          return pokeObject.name.includes(searchText);
+        })
+        .map((pokeObject, id) => {
+          return <ItemCard key={id} pokeIndex={id} name={pokeObject.name} />;
+        })}
     </main>
   );
 };

@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer.jsx";
 import Main from "../Main/Main.jsx";
 
 function App() {
-  //const [pokemon, setPokemon] = useState([]);
+  const [searchText, setSearchText] = useState("");
   /* let allPokemon = [];
 
   const processServerResponse = (res) => {
@@ -29,11 +29,17 @@ function App() {
       console.log(err);
     }); */
 
+  const handleSearchTextChange = (e) => {
+    setSearchText(e.target.value);
+  };
+
+  console.log(searchText);
+
   return (
     <div className="app">
-      <Header />
+      <Header onChange={handleSearchTextChange} />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Main searchText={searchText} />} />
       </Routes>
       <Footer />
     </div>
