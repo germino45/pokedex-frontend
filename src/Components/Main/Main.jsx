@@ -10,9 +10,11 @@ const Main = ({ searchText }) => {
   useEffect(() => {
     getPokemon()
       .then((data) => {
-        const pokemonList = data.results;
+        const pokemonList = data.results
+          .slice(0, data.results.length)
+          .map((items) => items)
+          .flat();
         setPokemon(pokemonList);
-        pokemonList.forEach((item) => {});
       })
       .catch((err) => {
         console.log(err);
@@ -26,7 +28,16 @@ const Main = ({ searchText }) => {
           return pokeObject.name.includes(searchText);
         })
         .map((pokeObject, id) => {
-          return <ItemCard key={id} pokeIndex={id} name={pokeObject.name} />;
+          return (
+            <ItemCard
+              key={id}
+              pokeIndex={pokeObject.url.split("/")[6]}
+              name={
+                pokeObject.name.charAt(0).toUpperCase() +
+                pokeObject.name.slice(1)
+              }
+            />
+          );
         })}
     </main>
   );

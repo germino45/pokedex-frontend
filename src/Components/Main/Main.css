@@ -7,4 +7,5 @@
   border: solid #222224;
   border-radius: 5px;
   overflow: scroll;
+  overflow-x: hidden;
 }

@@ -30,7 +30,7 @@ function App() {
     }); */
 
   const handleSearchTextChange = (e) => {
-    setSearchText(e.target.value);
+    setSearchText(e.target.value.toLowerCase());
   };
 
   console.log(searchText);
