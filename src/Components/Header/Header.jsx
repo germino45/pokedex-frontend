@@ -1,4 +1,4 @@
-import logo from "../../images/logo.svg";
+import logo from "../../images/Pikachu_logo.svg";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 
 function Header({ onChange }) {

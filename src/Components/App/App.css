@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Pokemon_GB_US";
+  src: url("../../vendor/fonts/Pokemon_GB_US.ttf");
+}
+
 .app {
+  font-family: "Pokemon_GB_US";
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #ee1515;
+  background-image: linear-gradient(to bottom, white, rgba(194, 78, 78, 0.774));
 }

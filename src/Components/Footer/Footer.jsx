@@ -1,7 +1,8 @@
 function Footer() {
   return (
     <div className="footer">
-      <h2>this is footer</h2>
+      <p className="footer__text">Developed by Michael Germino</p>
+      <p className="footer__text">2024</p>
     </div>
   );
 }

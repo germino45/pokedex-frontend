@@ -1,26 +1,25 @@
 .item__card {
-  display: flex;
+  font-size: 9px;
+  display: grid;
   position: relative;
   width: 125px;
   height: 125px;
   margin: 10px;
-  background-color: #fff;
+
   background-repeat: no-repeat;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
 
 .item__number {
   position: absolute;
-  top: -12px;
+  top: -6px;
   right: 2px;
 }
 
 .item__name {
-  position: absolute;
-
-  bottom: -10px;
-  left: 25px;
+  justify-self: flex-start;
+  align-self: flex-end;
 }

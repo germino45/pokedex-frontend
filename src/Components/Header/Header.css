@@ -1,13 +1,15 @@
 .header {
   display: flex;
+  position: relative;
   margin: 0;
-  flex-direction: column;
+  flex-direction: row;
+
   height: 15%;
   padding-bottom: 10px;
 }
 
 .header__logo {
-  width: 200px;
-  height: 200px;
-  padding-left: 10px;
+  width: 150px;
+  height: 150px;
+  padding-right: 10px;
 }
