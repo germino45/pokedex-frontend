@@ -27,7 +27,7 @@ const ItemModal = ({ selectedCard, onClose }) => {
   });
 
   return (
-    <div className="modal">
+    <div className="modal modal__type_item">
       <div className="modal__content modal__content_type_image">
         <button type="button" onClick={onClose} className="modal__close-btn">
           X

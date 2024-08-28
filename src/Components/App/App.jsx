@@ -1,13 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { getPokemonList, getPokemonInfo } from "../../utils/PokemonApi";
+import { getPokemonList } from "../../utils/PokemonApi";
 import { Routes, Route } from "react-router-dom";
-//import { getPokemon } from "../../utils/PokemonApi.js";
+import About from "../About/About.jsx";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Main from "../Main/Main.jsx";
 import ItemModal from "../ItemModal/ItemModal.jsx";
 import Preloader from "../Preloader/Preloader.jsx";
+import PageNotFound from "../PageNotFound/PageNotFound.jsx";
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
@@ -27,6 +28,10 @@ function App() {
   const handleSelectedCard = (card) => {
     setActiveModal("preview");
     setSelectedCard(card);
+  };
+
+  const handleNavigationClick = () => {
+    setActiveModal("navigation");
   };
 
   useEffect(() => {
@@ -57,7 +62,7 @@ function App() {
     };
 
     const handleOverlyClick = (e) => {
-      if (e.target.classList.contains("modal")) {
+      if (e.target.classList.contains("modal" || "navigation")) {
         handleCloseModal();
       }
     };
@@ -76,6 +81,7 @@ function App() {
       <Header onChange={handleSearchTextChange} />
       <Routes>
         <Route
+          exact
           path="/"
           element={
             isLoading ? (
@@ -89,6 +95,8 @@ function App() {
             )
           }
         />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
 
       <Footer />

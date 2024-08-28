@@ -1,0 +1,20 @@
+.navigation {
+  display: flex;
+  align-self: center;
+  font-weight: 500;
+}
+
+.navigation__link {
+  margin: 0 0 0 4px;
+  font-size: 10px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+.navigation__link:hover {
+  font-weight: 600;
+}
