@@ -15,4 +15,4 @@ https://germino45.github.io/pokedex-frontend/
 
 **Improves & future features**
 
-- I will be working on a responsive design to work with vertical monitors and phones. There will also be a feature where users can log in and like Pokemon, which will be added into their profile. Finally, sprite sounds will be played when a user clicks on a card. This will all come in the next update.
+- I will be working on a responsive design to work with vertical monitors and phones. There will also be a feature where users can log in and like Pokemon, which will be added into their profile. Finally, sprite sounds will be played when a user clicks on a card. This will all come in the next update
