@@ -1,0 +1,14 @@
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about__text {
+  text-align: center;
+}
+
+.about__picture {
+  max-width: 1350px;
+  height: 420px;
+}

@@ -1,0 +1,13 @@
+@import url(./vendor/normalize.css);
+
+@import url(./Components/App/App.css);
+@import url(./Components/About/About.css);
+@import url(./Components/Footer/Footer.css);
+@import url(./Components/Header/Header.css);
+@import url(./Components/Main/Main.css);
+@import url(./Components/ItemModal/ItemModal.css);
+@import url(./Components/PageNotFound/PageNotFound.css);
+@import url(./Components/Navigation/Navigation.css);
+@import url(./Components/Preloader/Preloader.css);
+@import url(./Components/SearchBar/SearchBar.css);
+@import url(./Components/ItemCard/ItemCard.css);
